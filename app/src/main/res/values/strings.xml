@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Tour Ethiopia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="place_tab">Places</string>
+    <string name="hotel_tab">Hotels</string>
+    <string name="travelagencies_tab">Travel agencies</string>
+    <string name="map_tab">Map</string>
 </resources>
