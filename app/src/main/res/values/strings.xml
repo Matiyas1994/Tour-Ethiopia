@@ -6,4 +6,7 @@
     <string name="hotel_tab">Hotels</string>
     <string name="travelagencies_tab">Travel agencies</string>
     <string name="map_tab">Map</string>
+
+    <string name="setting">Setting</string>
+    <string name="share">Share</string>
 </resources>
