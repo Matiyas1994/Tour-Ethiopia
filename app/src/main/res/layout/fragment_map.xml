@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".MapFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+ <WebView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/mapview"
+     android:padding="16dp"/>
+ 
+ <ProgressBar
+     android:layout_width="wrap_content"
+     android:layout_height="match_parent"
+  android:layout_gravity="center_horizontal"
+  style="?android:attr/progressBarStyle"
+  android:id="@+id/progressbar"/>
 
 </FrameLayout>
