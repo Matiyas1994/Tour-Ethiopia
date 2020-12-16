@@ -11,4 +11,26 @@
     <string name="share">Share</string>
 
     <string name="ethiopia_background">ethiopia_background</string>
+
+    <string name="unity_park">Unity Park</string>
+    <string name="lalibela">Lalibela</string>
+
+    <string name="lalibela_description">This was renamed for King Lalibela (1181-1221) of the Zagwe Dynasty which ruled in Lalibela for more than a century.
+        The construction of eleven rock-hewn churches is attributed to King Lalibela.
+        The buildings are monolithic, carved from a sloping mass of red volcanic scoria underlaid by dark grey basalt and interconnected by a maze of tunnels and passages with openings to hermit caves and catacombs.
+    Some are of the basilica type, having archaic features and imitating architectural elements from earlier periods,
+        yet they differ in design and style. Two are decorated with interesting wall paintings and carved figures.
+        The Lalibela churches are included in the World Heritage List;
+        the principal edifices are the Churches of Medhane Alem, Maryam, Ammanuel, Giyorgis and Golgota-Mikaïl.
+    </string>
+    <string name="unity_park_desc">
+        unity park of addiss.. we love u abiy from mati.
+    </string>
+
+    <string name="lalibela_hoteladrees">Address : Lalibela </string>
+    <string name="lalibela_hotelPhone">Tel : +251942201994</string>
+    <string name="unity_hoteladrees">Address : Addis Ababa </string>
+    <string name="unity_hotelPhone">Tel : +251942201994</string>
+
+
 </resources>

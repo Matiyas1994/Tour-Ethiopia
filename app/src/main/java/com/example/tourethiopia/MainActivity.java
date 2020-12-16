@@ -5,12 +5,17 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.tourethiopia.hotels.HotelFragment;
+import com.example.tourethiopia.place.PlaceFragment;
 
 public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
@@ -31,11 +36,21 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        MenuItem menuItem= menu.findItem(R.id.action_shareid);
+        shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
+        setshareActionIntent("Want to Know more about Ethiopia?");
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_create_orderid:
+            case R.id.action_setting:
                 Intent intent = new Intent(this, SettingActivity.class);
                 startActivity(intent);
                 return true;
