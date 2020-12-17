@@ -46,7 +46,7 @@ frequently overlooked by travelers. Relish locating the remains throughout the t
 monasteries, and visit below ground to see Aksumite empire graves. Don’t miss Mai Shum, a big rock carved
 water body that native tribes think the Queen of Sheba utilized as her bath.
     </string>
-    
+
     <string name="ertale_name">Ertale</string>
 
     <string name="ertale_desc">
@@ -64,7 +64,7 @@ One of Africa\'s most striking geographical features is a giant tear across the 
 
 
     <string name="dankil_name">Danakil</string>
-<string name="dankil_desc">
+    <string name="dankil_desc">
 Located on the frontier between Ethiopia and Eritrea is the Danakil Depression. It’s formally one of the aridest
 and warmest spots on Earth. With temperatures that frequently pass 50+ degrees, it’s effortless to find why.
 This is a surreal slice of land that’s scattered with active volcanoes, salted basins, warm springs, and a lava lake
@@ -105,11 +105,8 @@ incorporating the endangered Nechisar nightjar.
     </string>
 
 
-
-
-
     <!-- hotels -->
-<string name="skyligt_hotelname">Ethiopian Skylight Hotel</string>
+    <string name="skyligt_hotelname">Ethiopian Skylight Hotel</string>
     <string name="skyligt_hoteladrees">Bole Addis Ababa </string>
     <string name="skyligt_hotelPhone">Tel : 011 681 8181</string>
 
@@ -138,8 +135,6 @@ Unison Hotel and Spa </string>
     <string name="hailehawasa_hotelPhone">Tel : 096 331 3131</string>
 
 
-
-
     <!-- Travel agencies -->
     <string name="imagin_travellname">Imagine Ethiopia Tours </string>
     <string name="welcom_travellname">welcome Ethiopia tour </string>
@@ -150,8 +145,6 @@ Unison Hotel and Spa </string>
     <string name="ethio_travellname"> Ethio target tours</string>
     <string name="fklm_travellname">FKLM Ethiopia Tours, Travel and Car Rental </string>
     <string name="abba_travellname">Abba travel plc head office  </string>
-
-
 
 
     <string name="hint_entername">please Enter your name</string>
