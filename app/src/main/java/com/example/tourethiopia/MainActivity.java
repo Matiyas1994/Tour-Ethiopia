@@ -1,6 +1,11 @@
 package com.example.tourethiopia;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,15 +20,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.tourethiopia.hotels.HotelFragment;
+import com.example.tourethiopia.place.DetailActivity;
 import com.example.tourethiopia.place.PlaceFragment;
+import com.example.tourethiopia.travelagency.TravelagenciesFragment;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadlocale();
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarid);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
         setSupportActionBar(toolbar);
 
 
@@ -51,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_setting:
-                Intent intent = new Intent(this, SettingActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this, SettingActivity.class);
+//                startActivity(intent);
+                showchangeLangugeDialog();
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -108,4 +121,69 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void showchangeLangugeDialog() {
+        final String[] listitems={"አማርኛ","English"};
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        mBuilder.setTitle("Choose Language...");
+        mBuilder.setSingleChoiceItems(listitems, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                if (i==0){
+                    setLocale("am");
+//                    Intent intent2 = new Intent(MainActivity.this, DetailActivity.class);
+//                    intent2.putExtra(DetailActivity.EXTRA_lang_ID,"am");
+//                    startActivity(intent2);
+                    recreate();
+
+                }
+
+
+                else if (i==1){
+                    setLocale("en");
+//                    Intent intent2 = new Intent(MainActivity.this, DetailActivity.class);
+//                    intent2.putExtra(DetailActivity.EXTRA_lang_ID,"en");
+//                    startActivity(intent2);
+                    recreate();
+                }
+
+                dialogInterface.dismiss();
+
+            }
+        });
+
+        AlertDialog mDialog= mBuilder.create();
+        mDialog.show();
+    }
+
+    private  void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config= new Configuration();
+        config.locale=locale;
+
+
+        getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor= getSharedPreferences("settings",MODE_PRIVATE).edit();
+        editor.putString("My_Lang",lang);
+        editor.apply();
+
+    }
+
+    public  void loadlocale(){
+        SharedPreferences pref= getSharedPreferences("settings", Activity.MODE_PRIVATE);
+        String language= pref.getString("My_Lang","");
+        setLocale(language);
+    }
+
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        String lang =Locale.getDefault().toString();
+//        Intent intent2 = new Intent(MainActivity.this, DetailActivity.class);
+//        intent2.putExtra(DetailActivity.EXTRA_lang_ID,lang);
+//        startActivity(intent2);
+//
+//    }
 }

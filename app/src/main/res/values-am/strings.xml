@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Tour Ethiopia</string>
+    <string name="app_name">ጉዞ ኢትዮጵያ</string>
     <!-- Tabs -->
 
-    <string name="place_tab">Places</string>
-    <string name="hotel_tab">Hotels</string>
-    <string name="travelagencies_tab">Travel agencies</string>
-    <string name="map_tab">Map</string>
+    <string name="place_tab">ቦታ</string>
+    <string name="hotel_tab">ሆቴል</string>
+    <string name="travelagencies_tab">የጉዞ ኤጀንሲ</string>
+    <string name="map_tab">ካርታ</string>
 
     <!-- appbar options -->
     <string name="setting">Setting</string>
@@ -14,7 +14,7 @@
     <string name="ethiopia_background">ethiopia_background</string>
     <!-- Places -->
 
-    <string name="lalibela">Lalibela</string>
+    <string name="lalibela">ላሊበላ</string>
     <string name="lalibela_description">This was renamed for King Lalibela (1181-1221) of the Zagwe Dynasty which ruled in Lalibela for more than a century.
         The construction of eleven rock-hewn churches is attributed to King Lalibela.
         The buildings are monolithic, carved from a sloping mass of red volcanic scoria underlaid by dark grey basalt and interconnected by a maze of tunnels and passages with openings to hermit caves and catacombs.
@@ -25,7 +25,7 @@
     </string>
 
 
-    <string name="unity_park">Unity Park</string>
+    <string name="unity_park">የአንድነት ፓርክ</string>
     <string name="unity_park_desc">
 
         The newly-branded “Unity Park” resides on the 40 hectacres (around 100 acres) of palace grounds set aside on a high,
@@ -36,7 +36,7 @@
     </string>
 
 
-    <string name="axum_name">Axsum</string>
+    <string name="axum_name">አክሱም</string>
     <string name="axum_desc">
         It is a place soaked in legends. Thought to have been the abode of the Queen of Sheba and the ultimate resting
 spot of the Ark of the Covenant,this is one of the most ancient towns in total Africa. Find over the fences of the
@@ -46,8 +46,8 @@ frequently overlooked by travelers. Relish locating the remains throughout the t
 monasteries, and visit below ground to see Aksumite empire graves. Don’t miss Mai Shum, a big rock carved
 water body that native tribes think the Queen of Sheba utilized as her bath.
     </string>
-    
-    <string name="ertale_name">Ertale</string>
+
+    <string name="ertale_name">ኤርታሌ</string>
 
     <string name="ertale_desc">
 One of Africa\'s most striking geographical features is a giant tear across the earth\'s surface visible even
@@ -63,8 +63,8 @@ One of Africa\'s most striking geographical features is a giant tear across the 
     </string>
 
 
-    <string name="dankil_name">Danakil</string>
-<string name="dankil_desc">
+    <string name="dankil_name">ደንከል</string>
+    <string name="dankil_desc">
 Located on the frontier between Ethiopia and Eritrea is the Danakil Depression. It’s formally one of the aridest
 and warmest spots on Earth. With temperatures that frequently pass 50+ degrees, it’s effortless to find why.
 This is a surreal slice of land that’s scattered with active volcanoes, salted basins, warm springs, and a lava lake
@@ -74,7 +74,7 @@ if you aren’t ready. But the charm and enigma of this location make any arrang
 
 </string>
 
-    <string name="fasil_named">Gondar</string>
+    <string name="fasil_named">ጎንደር</string>
     <string name="fasil_desc">
         The 18th century of Ethiopia was Gondar, where then Emperor Fasiladas established his legendary fortresses.
 This UNESCO World Heritage Site is today a beautiful museum compound and a wonderful tourist attractions
@@ -85,7 +85,7 @@ center and take a walk through tin-covered stone edifices. Wonderful shopping, e
 accessible in this place.In adjacent Gorgora you’ll see a little but magnificent Christian monastery
     </string>
 
-    <string name="bluenile_named">Blue Nile falls</string>
+    <string name="bluenile_named">ጭስ አባይ</string>
     <string name="bluenile_desc">
         The Nile River is the lengthiest in Africa and its two headwaters are the White Nile and the Blue Nile. The Blue
 Nile starts in Ethiopia and along its route you’ll see the Blue Nile Falls – a site to opponent Niagara. Nearly 90
@@ -95,7 +95,7 @@ you’ll see Ethiopia’s early stone bridge, established in the 17th century
     </string>
 
 
-    <string name="nechsar_named">Nechisar National Park</string>
+    <string name="nechsar_named">ነጭ ሳር ብሔራዊ ፓርክ</string>
     <string name="nechsar_desc">
         One of the biggest tourist attractions in Ethiopia, this national park is located in southwest of the country. Its
 mixed land extends over slopes, wetlands, and jungle. Zebras and gazelles wander the huge grassy land of the
@@ -109,7 +109,7 @@ incorporating the endangered Nechisar nightjar.
 
 
     <!-- hotels -->
-<string name="skyligt_hotelname">Ethiopian Skylight Hotel</string>
+    <string name="skyligt_hotelname">Ethiopian Skylight Hotel</string>
     <string name="skyligt_hoteladrees">Bole Addis Ababa </string>
     <string name="skyligt_hotelPhone">Tel : 011 681 8181</string>
 
