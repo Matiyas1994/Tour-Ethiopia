@@ -1,41 +1,29 @@
-package com.example.tourethiopia;
+package com.example.tourethiopia
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.Context
+import android.content.res.Configuration
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
+import android.view.View
+import java.util.*
 
-import java.util.Locale;
-
-public class SettingActivity extends AppCompatActivity {
-
-
-//    TextView language_dialog,text1;
-//    boolean lang_selected;
-//    Context context;
-//    Resources resources;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        loadlocale();
-        setContentView(R.layout.activity_setting);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarid);
-        setSupportActionBar(toolbar);
-//        ActionBar actionBar= getSupportActionBar();
+class SettingActivity : AppCompatActivity() {
+    //    TextView language_dialog,text1;
+    //    boolean lang_selected;
+    //    Context context;
+    //    Resources resources;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        loadlocale()
+        setContentView(R.layout.activity_setting)
+        val toolbar = findViewById<View>(R.id.toolbarid) as Toolbar
+        setSupportActionBar(toolbar)
+        //        ActionBar actionBar= getSupportActionBar();
 //        actionBar.setTitle(getResources().getString(R.string.app_name));
-
-        showchangeLangugeDialog();
+        showchangeLangugeDialog()
 
 
 //                language_dialog = (TextView)findViewById(R.id.dialog_language);
@@ -91,54 +79,40 @@ public class SettingActivity extends AppCompatActivity {
 //                    }
 //
 //                });
+    }
+
+    private fun showchangeLangugeDialog() {
+        val listitems = arrayOf("አማርኛ", "English")
+        val mBuilder = AlertDialog.Builder(this@SettingActivity)
+        mBuilder.setTitle("Choose Language...")
+        mBuilder.setSingleChoiceItems(listitems, -1) { dialogInterface, i ->
+            if (i == 0) {
+                setLocale("am")
+                recreate()
+            } else if (i == 1) {
+                setLocale("en")
+                recreate()
             }
-
-    private void showchangeLangugeDialog() {
-        final String[] listitems={"አማርኛ","English"};
-        AlertDialog.Builder mBuilder = new AlertDialog.Builder(SettingActivity.this);
-        mBuilder.setTitle("Choose Language...");
-        mBuilder.setSingleChoiceItems(listitems, -1, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
-                if (i==0){
-                    setLocale("am");
-                    recreate();
-                }
-
-
-                else if (i==1){
-                    setLocale("en");
-                    recreate();
-                }
-
-                dialogInterface.dismiss();
-
-            }
-        });
-
-        AlertDialog mDialog= mBuilder.create();
-        mDialog.show();
+            dialogInterface.dismiss()
+        }
+        val mDialog = mBuilder.create()
+        mDialog.show()
     }
 
-    private  void setLocale(String lang) {
-        Locale locale = new Locale(lang);
-        Locale.setDefault(locale);
-        Configuration config= new Configuration();
-        config.locale=locale;
-
-        getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
-
-        SharedPreferences.Editor editor= getSharedPreferences("settings",MODE_PRIVATE).edit();
-        editor.putString("My_Lang",lang);
-        editor.apply();
-
+    private fun setLocale(lang: String?) {
+        val locale = Locale(lang)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+        val editor = getSharedPreferences("settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", lang)
+        editor.apply()
     }
 
-    public  void loadlocale(){
-        SharedPreferences pref= getSharedPreferences("settings", Activity.MODE_PRIVATE);
-        String language= pref.getString("My_Lang","");
-        setLocale(language);
+    fun loadlocale() {
+        val pref = getSharedPreferences("settings", Activity.MODE_PRIVATE)
+        val language = pref.getString("My_Lang", "")
+        setLocale(language)
     }
-
 }
