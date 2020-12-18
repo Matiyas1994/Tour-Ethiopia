@@ -34,9 +34,9 @@ class HotelFragment : Fragment() {
         //        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         hotelRecycler.layoutManager = LinearLayoutManager(activity)
         hotelRecycler.addItemDecoration(DividerItemDecoration(activity, LinearLayoutManager.VERTICAL))
-        adapter.setListener { position ->
+        adapter.setListener { position->
             val intent = Intent(activity, HotelDetailActivity::class.java)
-            intent.putExtra(HotelDetailActivity.Companion.EXTRA_HOTELS_ID, position)
+            intent.putExtra( HotelDetailActivity.Companion.EXTRA_HOTELS_ID, position)
             activity!!.startActivity(intent)
         }
         return hotelRecycler

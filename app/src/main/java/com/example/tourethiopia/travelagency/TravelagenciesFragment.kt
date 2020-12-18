@@ -34,8 +34,9 @@ class TravelagenciesFragment : Fragment() {
         travelRecycler.layoutManager = LinearLayoutManager(activity)
         travelRecycler.addItemDecoration(DividerItemDecoration(activity, LinearLayoutManager.VERTICAL))
         adapter.setListener { position ->
-            val intent = Intent(activity, TravelDetailActivity::class.java)
-            intent.putExtra(TravelDetailActivity.Companion.EXTRA_TRAVEL_ID, position)
+            val intent = Intent(activity, TravelDetailActivity::class.java).apply {
+                putExtra(TravelDetailActivity.Companion.EXTRA_TRAVEL_ID, position)
+                }
             activity!!.startActivity(intent)
         }
         return travelRecycler

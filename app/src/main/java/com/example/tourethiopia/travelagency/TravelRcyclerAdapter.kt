@@ -18,7 +18,7 @@ class TravelRcyclerAdapter(private val captions: IntArray, private val imageid: 
         fun onClick(position: Int)
     }
 
-    class ViewHolder(val cardView: CardView) : RecyclerView.ViewHolder(cardView)
+  inner  class ViewHolder(val cardView: CardView) : RecyclerView.ViewHolder(cardView)
 
     override fun getItemCount(): Int {
         return captions.size

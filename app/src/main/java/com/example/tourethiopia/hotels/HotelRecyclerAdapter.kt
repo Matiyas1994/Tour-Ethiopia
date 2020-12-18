@@ -24,7 +24,7 @@ class HotelRecyclerAdapter(private val captions: IntArray, private val imageid: 
         return captions.size
     }
 
-    fun setListener(listener: Listener?) {
+    fun setListener(listener: Listener) {
         this.listener = listener
     }
 

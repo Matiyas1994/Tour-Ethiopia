@@ -150,6 +150,8 @@ Unison Hotel and Spa </string>
     <string name="hint_entername">please Enter your name</string>
     <string name="hint_enteremail">please Enter your email address</string>
     <string name="registration">If You want to receive emails about  Amazing up coming events, please register below. </string>
-
+<string name="reg_success">Your Registration has been sent successfully </string>
+    <string name="undo">Undo</string>
+    <string name="undone">Undone!</string>
 
 </resources>

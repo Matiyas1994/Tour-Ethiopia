@@ -3,5 +3,4 @@
     android:id="@+id/pizza_recycler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ethiopia_background"
     android:scrollbars="vertical" />
