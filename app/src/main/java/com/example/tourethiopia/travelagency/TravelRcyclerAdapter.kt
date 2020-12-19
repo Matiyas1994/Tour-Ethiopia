@@ -47,10 +47,9 @@ class TravelRcyclerAdapter(private val captions: IntArray, private val imageid: 
         val ratingBar = cardView.findViewById<View>(R.id.travelrate) as RatingBar
         ratingBar.rating = rating[position]
         cardView.setOnClickListener {
-            if (listener != null) {
-                listener!!.onClick(position)
-            }
+            listener?.onClick(position)
         }
+
     }
 
 }

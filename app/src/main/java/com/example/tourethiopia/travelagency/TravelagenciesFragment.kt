@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tourethiopia.R
+import com.example.tourethiopia.place.DetailActivity
+import com.example.tourethiopia.place.RecyclerAdapter
 
 class TravelagenciesFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -33,12 +35,14 @@ class TravelagenciesFragment : Fragment() {
         //        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         travelRecycler.layoutManager = LinearLayoutManager(activity)
         travelRecycler.addItemDecoration(DividerItemDecoration(activity, LinearLayoutManager.VERTICAL))
-        adapter.setListener { position ->
-            val intent = Intent(activity, TravelDetailActivity::class.java).apply {
-                putExtra(TravelDetailActivity.Companion.EXTRA_TRAVEL_ID, position)
-                }
-            activity!!.startActivity(intent)
-        }
+        adapter.setListener(object : TravelRcyclerAdapter.Listener {
+            override fun onClick(position: Int) {
+                val intent = Intent(activity, TravelDetailActivity::class.java)
+                intent.putExtra(TravelDetailActivity.Companion.EXTRA_TRAVEL_ID, position)
+                activity!!.startActivity(intent)
+            }
+        })
+
         return travelRecycler
     }
 }

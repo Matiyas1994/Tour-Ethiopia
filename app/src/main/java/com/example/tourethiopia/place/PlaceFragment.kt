@@ -28,11 +28,14 @@ class PlaceFragment : Fragment() {
         placeRecycler.adapter = adapter
         val layoutManager = GridLayoutManager(activity, 2)
         placeRecycler.layoutManager = layoutManager
-        adapter.setListener { position ->
-            val intent = Intent(activity, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.Companion.EXTRA_PLACES_ID, position)
-            activity!!.startActivity(intent)
-        }
+        adapter.setListener(object : RecyclerAdapter.Listener {
+            override fun onClick(position: Int) {
+                val intent = Intent(activity, DetailActivity::class.java)
+                intent.putExtra(DetailActivity.Companion.EXTRA_PLACES_ID, position)
+                activity!!.startActivity(intent)
+            }
+        })
+
         return placeRecycler
     }
 }
