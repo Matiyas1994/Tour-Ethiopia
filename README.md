@@ -15,4 +15,5 @@ class FirstActivity : AppCompatActivity() {
             finish()
         }, SPLASH_TIME.toLong()) // wait for 4 seconds
     }
-}```
+}
+```
