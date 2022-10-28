@@ -1,5 +1,5 @@
-# [Tour Ethiopia](https://www.lonelyplanet.com/ethiopia/tours)
+# [Tour Ethiopia]((https://drive.google.com/file/d/1wwg7xH30OwuaOiLBqRSRaZJleWVEyHXK/view?usp=sharing)
 ## Description
 As we know Ethiopia is one of a great place to visit in the world. there are alot of tourists who came to visit Ethiopia per year. so this application is developed to help tourists.Tour Ethiopia will showcase tourist destinations in Ethiopia so that the tourists will have the awareness of where to go and also they will pick hotels around there. You can checkout destinations and get additional info about them. lets explore Ethiopia!
 ```
-Download The apk file [Link here](https://drive.google.com/file/d/1wwg7xH30OwuaOiLBqRSRaZJleWVEyHXK/view?usp=sharing).
+
